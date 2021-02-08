@@ -21,8 +21,6 @@ PCB project:https://oshwhub.com/soulhand/tu-ya-zhi-neng-di-gong-hao-huan-jing-zh
 下面是PCB的原理图、2D图像和3D渲染图。
 
 
-![image-20210125213546652](image-20210125213546652.png)
-
 <img src="https://gitee.com/buddismblingblinghead/MxyPic/raw/master/img/image-20210125213416026.png" alt="image-20210125213416026" style="zoom: 50%;" />
 
 ![预览-3d-keyshot-big.jpg](https://gitee.com/buddismblingblinghead/MxyPic/raw/master/img/GrO41nWC4SD5Ic41RuDKGGvQHAi44D4A26bCRIQF.jpeg)
@@ -83,10 +81,28 @@ PCB project:https://oshwhub.com/soulhand/tu-ya-zhi-neng-di-gong-hao-huan-jing-zh
 
 - 有能力就再加小游戏
 
-  
+器件选型：
 
-------
+单片机：stm32F411ccu6（100Mhz）
 
-这期推送到这里就结束了，希望大家能够追随自己的兴趣呦，不要老是沉浸在考试学习里。
+电源管理芯片：TP4056
 
-------
+3.3V电源dcdc芯片：TPS62740DSSR
+
+锂电池：3.7V/200mAh，厚5mm宽20长30
+
+显示屏：ips 0.96寸TFT
+
+陀螺仪：LSM6DSM
+
+触摸按键芯片：TTP232-CA6
+
+蜂鸣器：贴片蜂鸣器5020
+
+环境参数传感器：BME280
+
+使用LVGL编写显示界面
+
+工程代码：https://github.com/mxyxbb/LVGL_STM32F411_HAL_HandheldWeatherStation
+
+目前的功能请看下方视频，或前往Bilibili：https://www.bilibili.com/video/BV1Vv411e7ax/
