@@ -57,10 +57,7 @@ PCB project:https://oshwhub.com/soulhand/tu-ya-zhi-neng-di-gong-hao-huan-jing-zh
 
 其实选器件的依据很直接，别人用过的，有参考代码的，我就用(●'◡'●)
 
-
-
 ![image-20210125212702696](https://gitee.com/buddismblingblinghead/MxyPic/raw/master/img/image-20210125212702696.png)
-
 
 
 板载输入设备：
@@ -105,4 +102,4 @@ PCB project:https://oshwhub.com/soulhand/tu-ya-zhi-neng-di-gong-hao-huan-jing-zh
 
 工程代码：https://github.com/mxyxbb/LVGL_STM32F411_HAL_HandheldWeatherStation
 
-目前的功能请看下方视频，或前往Bilibili：https://www.bilibili.com/video/BV1Vv411e7ax/
+目前的功能请前往Bilibili查看视频：https://www.bilibili.com/video/BV1Vv411e7ax/
