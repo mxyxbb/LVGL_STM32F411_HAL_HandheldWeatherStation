@@ -61,6 +61,29 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef* i2cHandle)
     PB6     ------> I2C1_SCL
     PB7     ------> I2C1_SDA
     */
+		
+		 // strong pull-uphigh to recover from locking in BUSY state
+
+    GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;      //此行原有
+
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;   //GPIO配置为输出
+
+    GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;         //强上拉
+
+		HAL_GPIO_Init(GPIOB,&GPIO_InitStruct);
+
+ 
+
+    HAL_GPIO_WritePin(GPIOB, 6, GPIO_PIN_SET);       //拉高SCL
+
+    HAL_GPIO_WritePin(GPIOB, 7, GPIO_PIN_SET);       //拉高SDA
+
+ 
+
+		hi2c1.Instance->CR1= I2C_CR1_SWRST;          //复位I2C控制器
+
+		hi2c1.Instance->CR1= 0;              //解除复位（不会自动清除）
+		
     GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
     GPIO_InitStruct.Pull = GPIO_PULLUP;

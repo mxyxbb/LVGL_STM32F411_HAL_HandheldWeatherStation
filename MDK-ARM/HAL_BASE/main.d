@@ -210,3 +210,5 @@ hal_base\main.o: ../Core/Src/lvgl/src/lv_objx/../../../lv_conf.h
 hal_base\main.o: ../Core/Src/lvgl/src/lv_draw/lv_img_cache.h
 hal_base\main.o: ../Core/Src/multi_button/multi_button.h
 hal_base\main.o: ../Core/Src/lowpower/lpmode.h
+hal_base\main.o: ../Core/Src/lsm6dsm_STdC/driver/lsm6dsm_reg.h
+hal_base\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

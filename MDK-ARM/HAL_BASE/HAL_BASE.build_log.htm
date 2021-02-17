@@ -21,24 +21,38 @@ Target DLL:      CMSIS_AGDI.dll V1.31.17.0
 Dialog DLL:      TCM.DLL V1.36.1.0
  
 <h2>Project:</h2>
-D:\shared documents\code projects\keil\stm32f411ccu6CubeMX\HAL_BASE_20210208_1_windowdrag\MDK-ARM\HAL_BASE.uvprojx
-Project File Date:  02/08/2021
+D:\shared documents\code projects\keil\stm32f411ccu6CubeMX\HAL_BASE_20210210_1_LSM6DSM\MDK-ARM\HAL_BASE.uvprojx
+Project File Date:  02/10/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Program Files\Keil_v5\ARM\ARMCC\Bin'
 Build target 'HAL_BASE'
-compiling Page_DialPlate.c...
+compiling main.c...
 ../Core/Inc/rtc.h(44): warning:  #1295-D: Deprecated declaration set_time - give arg types
   void set_time();
 ../Core/Inc/rtc.h(45): warning:  #1295-D: Deprecated declaration set_alarm - give arg types
   void set_alarm();
-..\Core\Src\GUI\Page_DialPlate.c(417): warning:  #177-D: function "LabelStep_Create"  was declared but never referenced
-  static void LabelStep_Create()
-..\Core\Src\GUI\Page_DialPlate.c: 3 warnings, 0 errors
+../Core/Src/lowpower/lpmode.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LPMODE_H__ */
+../Core/Src/main.c(359): warning:  #513-D: a value of type "void (*)(lv_obj_t *, lv_coord_t)" cannot be assigned to an entity of type "lv_anim_exec_xcb_t"
+  	a.exec_cb = lv_obj_set_y; // y轴移�?
+../Core/Src/main.c(367): warning:  #513-D: a value of type "void (*)()" cannot be assigned to an entity of type "lv_anim_ready_cb_t"
+  	a.ready_cb = ready_call_back;  // 自定义的打印函数
+../Core/Src/main.c(477): warning:  #188-D: enumerated type mixed with another type
+  			HAL_GPIO_WritePin(LED_GPIO_Port,LED_Pin,1);
+../Core/Src/main.c(130): warning:  #177-D: function "lv_ex_label_1"  was declared but never referenced
+  static void lv_ex_label_1(void)
+../Core/Src/main.c(141): warning:  #177-D: function "lv_test"  was declared but never referenced
+  static void lv_test(void)
+../Core/Src/main.c(377): warning:  #177-D: variable "appWindow"  was declared but never referenced
+  static lv_obj_t * appWindow;
+../Core/Src/main.c(379): warning:  #177-D: variable "imgBg"  was declared but never referenced
+  static lv_obj_t * imgBg;
+../Core/Src/main.c: 10 warnings, 0 errors
 linking...
-Program Size: Code=64606 RO-data=74370 RW-data=512 ZI-data=72080  
+Program Size: Code=68134 RO-data=74370 RW-data=532 ZI-data=73116  
 FromELF: creating hex file...
-"HAL_BASE\HAL_BASE.axf" - 0 Error(s), 3 Warning(s).
+"HAL_BASE\HAL_BASE.axf" - 0 Error(s), 10 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -61,7 +75,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.2.0
-Build Time Elapsed:  00:00:10
+Build Time Elapsed:  00:00:06
 </pre>
 </body>
 </html>

@@ -163,7 +163,7 @@ static void Task_TopBarUpdate(lv_task_t * task)
 static void Task_BatUpdate(lv_task_t * task)
 {
     /*读取电池电压*/
-    float battVoltage = my_adc_read()*4;
+    float battVoltage = my_adc_read()*4.18;
     
     /*是否充电*/
 //    bool Is_BattCharging = !digitalRead(BAT_CHG_Pin);

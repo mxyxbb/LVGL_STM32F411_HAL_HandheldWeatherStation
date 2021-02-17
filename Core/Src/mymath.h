@@ -53,5 +53,23 @@ do{\
     static bool isInit = false;\
     if(!isInit){func,isInit=true;}\
 }while(0)
+
+
+
+
+#define MSB(x) (((x) >> 8) & 0xff) /* x占2byte（如short）2byte的高地址的1byte */
+#define LSB(x) ((x) & 0xff)	/* x占2byte（如short）2byte的低地址的1byte*/
+
+#define MSW(x) (((x) >> 16) & 0xffff) /* x占4byte（如int）  4byte的高地址的2byte */
+#define LSW(x) ((x) & 0xffff) 		  			
+#define WORDSWAP(x) (MSW(x) | (LSW(x) << 16)) /* x占4byte（如int） 低2字节与高2字节内容交换 */	
+
+#define LLSB(x)	((x) & 0xff)	/*x占4byte（如int） 取低地址1byte*/					
+#define LNLSB(x) (((x) >> 8) & 0xff)
+#define LNMSB(x) (((x) >> 16) & 0xff)
+#define LMSB(x)	 (((x) >> 24) & 0xff)
+
+/* number of elements in an array */
+#define ARRAY_SIZE(a) (sizeof (a) / sizeof ((a)[0])) 	
 	
 #endif

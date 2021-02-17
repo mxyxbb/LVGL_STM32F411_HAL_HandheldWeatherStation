@@ -46,6 +46,7 @@
 #include "multi_button/multi_button.h"
 //lowpower
 #include "lowpower/lpmode.h"
+#include "lsm6dsm_STdC/driver/lsm6dsm_reg.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -119,7 +120,10 @@ void init() {
 	if(HAL_RTCEx_BKUPRead(&hrtc,RTC_BKP_DR1) != 0x32F2)//RTC时间初始化
 		set_time();
 	set_alarm();
+	//做初始化
+	lsm6dsm_read_data_polling();
 	HAL_UART_Receive_IT(&huart2, &bRxBuffer, 1);//串口中断接收
+	//F4不支持	HAL_ADCEx_Calibration_Start(&hadc1);                     //校准ADC
 }
 
 
@@ -383,8 +387,7 @@ static lv_obj_t * imgBg;
 //    lv_obj_align(imgBg, NULL, LV_ALIGN_CENTER, 0, 0);
 //}
 
-    
-    
+
     
    
     
@@ -430,10 +433,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 	init();
-//	ImgBg_Create();
-//	my_lv_anim1();
+
 	DialPlateSetup();
-//	lv_ex_canvas_1();
+
 	
 	HAL_TIM_Base_Start_IT(&htim10);
 
@@ -495,6 +497,7 @@ int main(void)
 		if(bt_update){
 			bt_update=0;
 			all_data_update();
+			imu_lsm6dsm_read();
 		}
 
 	}

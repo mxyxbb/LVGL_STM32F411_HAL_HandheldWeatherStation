@@ -23,6 +23,8 @@
 "hal_base\stm32f4xx_it.o"
 "hal_base\stm32f4xx_hal_msp.o"
 "hal_base\lpmode.o"
+"hal_base\lsm6dsm_reg.o"
+"hal_base\lsm6dsm_read_data_polling.o"
 "hal_base\stm32f4xx_hal_adc.o"
 "hal_base\stm32f4xx_hal_adc_ex.o"
 "hal_base\stm32f4xx_hal_rcc.o"

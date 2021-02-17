@@ -507,6 +507,16 @@
               <FileType>1</FileType>
               <FilePath>..\Core\Src\lowpower\lpmode.c</FilePath>
             </File>
+            <File>
+              <FileName>lsm6dsm_reg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\lsm6dsm_STdC\driver\lsm6dsm_reg.c</FilePath>
+            </File>
+            <File>
+              <FileName>lsm6dsm_read_data_polling.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\lsm6dsm_STdC\example\lsm6dsm_read_data_polling.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
